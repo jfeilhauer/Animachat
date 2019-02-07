@@ -1,0 +1,17 @@
+<div class="login" > 
+<form action="/index" method="post">
+    <u><div class="nadpis">Přihlášení</div></u>
+    <input name="name" type="text" placeholder="Uživatelské jméno" autofocus>
+    <div id="chybneUdaje">Chybné uživatelské jméno nebo heslo</div>
+    <input name="password" type="password" placeholder="Heslo">
+    <a href="/ZapomenuteHeslo">Zapomenuté heslo?</a>
+    <input type="submit" value="Přihlásit se"> 
+</form>
+</div>
+<script type="text/javascript">
+var chybneUdaje= getCookie('chybneUdaje'); 
+if (chybneUdaje =="true") 
+{
+    document.getElementById('chybneUdaje').style.visibility = 'visible';
+}
+</script>

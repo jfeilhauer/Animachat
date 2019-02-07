@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="<?= $popis ?>" />
+    <meta name="keywords" content="<?= $klicova_slova ?>" />
+    <meta name="author" content="Jaromír Feilhauer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Animachat">
+    <meta property="og:type" content="website">  
+    <meta property="og:url" content="http://absolutni-adresa-sdileneho-objektu">
+    <meta property="og:title" content="<?= $titulek ?>">  
+    <meta property="og:description" content="<?= $popis ?>"><link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+    <meta name="theme-color" content="#123368">  
+    
+    <title><?= $titulek ?> :: Animachat</title>
+    <!-- ikony -->
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">    
+    <!-- css -->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="<?= $css ?>" type="text/css">
+    
+    <script src="../js/main.js"></script>
+    
+  </head>
+  <body>
+  
+    <header>   
+        <nav>
+           <a href="/index"><img id="logo" src="../img/logo_animachat.png"></a>
+            <div id="menu-btn" onclick="nav_show()">
+             <div></div><div></div><div></div>
+            </div>
+            <div id="nav">
+                <a href="/o_projektu"><div class="menu-btn">O projektu</div></a>
+                <a href="/uzivatel/<?= $username ?>"><div class="menu-btn"><?= $nastaveni ?></div></a>                
+            </div>
+        </nav>
+    </header>
+    
+    <article class="article">
+        <?php $this->controller->vypisView($this->data['user']); ?>
+    </article>
+    <footer>    
+    </footer>
+<!-- javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/mobile.js"></script>    
+  </body>
+
+</html>

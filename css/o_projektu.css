@@ -1,0 +1,23 @@
+.info{
+}
+.help {
+}
+.info h1, .help h1{
+    display: block;
+    color: white;
+    background-color: #123368;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    width: 50%;
+    cursor: pointer;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+}
+.help div {
+    display: block;
+}
+.help div {
+    display: block;
+}

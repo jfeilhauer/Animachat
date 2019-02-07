@@ -1,0 +1,36 @@
+<div id="content">
+    <div class="info">
+        <h1>Informace</h1>
+        <div>
+        <p>Tento projekt Animachat byl vytvořen pro potřeby maturitní práce. Slouží pro komunikaci skupiny lidí, kteří spolu potřebují komunikovat</p>
+        <p>Vytvořeno v roce 2019.</p> 
+        </div> 
+    </div>
+    <div class="help">
+        <h1>Nápověda</h1>
+        <div>
+            <p>- Pokud ještě nemáte účet, zaregistrujte se na stránce <a href="/uzivatel"><u><b>REGISTRACE</b></u></a></p>
+            <p>- Pokud již účet máte, přihlaste se. Na hlavní stránce se zobrazí chat.</p>
+            <p>- Novou zprávu odešlete stiskem ENTERU</p>
+            <p>- Své údaje a heslo můžete změnit po přihlášení v záložce UŽIVATEL</p>
+        </div> 
+    </div>
+</div>
+<script>
+var info = document.getElementsByClassName('info')[0];
+var help = document.getElementsByClassName('help')[0];
+info.onclick = function(){
+    show(info.getElementsByTagName('div')[0]);     
+};
+help.onclick = function(){
+    show(help.getElementsByTagName('div')[0]);     
+};
+function show(e){
+    var table= e; 
+    if (table.style.display=="block"){
+        table.style.display="none";}
+    else {
+        table.style.display="block";
+    }
+}
+</script>

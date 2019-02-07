@@ -1,0 +1,37 @@
+<div id="content">
+    <div class="welcome2">
+     <h1>Vítejte v Animachat</h1>
+    </div>
+    <div class="leve">
+<?php
+    $chat = new chat(); 
+    echo $chat->vypisAnimatory(); 
+?> 
+    </div>
+    <div class="prave"> 
+        <div class="messenger-box">
+            <div id="messenger" readonly contentEditable="false">
+                <div id="loadNext">načíst další</div>
+                <div id="messengerPlace"></div>
+            </div>
+            <input type="text" id="message" name="message" placeholder="napiš zprávu.." autofocus><div id="eButton" class="eButton" onclick="show()"><img src="../img/emoji.png"></div>
+            <div class="eTable">
+<?php
+$table=''; 
+$eList = array("🙂","😀","😄","😆","😅","😂","😊","😉","😏","😍","😘","🤗","😳","😇","😜","😋","😎","😒","😞","😖","😢","😭","😟","🤔","😴","😯","😬","👍","👎","✌️","👌","☝️","👊","✊","💪","🙏","✋","👋","♥️","❤","💕","💓");
+for($i=0;$i<count($eList);$i++){
+    $table = $table.'<div onclick="insertSmile(\''.$eList[$i].'\')">'.$eList[$i].'</div>';
+};
+echo $table;            
+?>
+            </div>
+            
+        </div>
+        <div id="user">
+        <u>Jsi přihlášen jako <?= $name ?></u>
+        
+        <a href="/Logout">Odhlásit se</a>
+        </div>
+    </div>
+</div>
+<script src="../js/ajax.js"></script>

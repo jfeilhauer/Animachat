@@ -1,0 +1,14 @@
+<div>
+ <h1>Registrace nového uživatele</h1>
+<form action="#" method="POST" onSubmit="return Odeslani();" name="f" enctype="multipart/form-data">
+    <input type="text" id="username" name="username" placeholder="Uživatelské jméno" onfocusout="checkInputs(this);"><div class="alert"></div><br>
+    <input type="text" id="name" name="name" placeholder="Jméno" onfocusout="checkInputs(this);"><div class="alert"></div><br>
+    <input type="text" id="vorname" name="vorname" placeholder="Příjmení" onfocusout="checkInputs(this);"><div class="alert"></div><br>
+    <input type="email" id="email" name="email" placeholder="Email" onfocusout="checkInputs(this);"><div class="alert"></div><br>
+    <input type="password" id="password" name="password" placeholder="Heslo" onKeyDown="correctPassword(this);" onfocusout="correctPassword(this);"><div class="alert"></div><br>
+    <input type="password" id="passwordAgain" name="passwordAgain" placeholder="Zadejte heslo znovu" onfocusout="checkPassword(this);"><div class="alert"></div><br>
+    <input name="avatar" id="file" accept="image/*" type="file" onchange="checkFile(this);"><div class="alert"></div><br><br>
+    <input type="submit" id="submit" name="submit" value="Registrovat se">
+</form>
+</div>
+<script src="../js/registrace.js"></script>

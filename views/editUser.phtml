@@ -1,0 +1,27 @@
+<h1>Nastavení účtu</h1>
+<form action="#" method="POST" enctype="multipart/form-data">
+    <input type="text" name="newName" placeholder="<?= $name ?>"><br>
+    <input type="text" name="newVorname" placeholder="<?= $vorname ?>"><br>
+    <input type="password" name="password" placeholder="Nové heslo"><br>
+    <input type="password" name="newPasswordAgain" placeholder="Potvrzení hesla"><br>
+    <input name="newAvatar" id="file" accept="image/*" type="file" onchange="checkFile(this);"><div class="alert"></div><br><br>
+    <input type="submit" value="Uložit">
+</form>
+<script>
+function checkFile(Object){
+    var input, file;
+    input = document.getElementById('file');
+    file = input.files[0];
+    if(file.size >= (2*1024*1024)){
+        input.style.border='thick solid red';
+        input.nextSibling.innerHTML='Obrázek je příliš velký- '+(file.size/1024)+'kB';
+        return false;
+    }
+    else {
+        Object.nextSibling.innerHTML= (file.size/1024)+'kB';
+        return true;
+        
+    }
+}
+</script>
+                                                                                                                                    
