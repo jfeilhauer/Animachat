@@ -10,7 +10,6 @@ class LogoutController extends Controller
 		);
 		$odhlaseni = new Logout();
         $this->presmeruj('index');
-				
-		
     }
 }
+?>

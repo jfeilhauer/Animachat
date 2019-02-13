@@ -1,8 +1,8 @@
 <?php
-// Počáteční soubor webu
-// Autor: Jaromír Feilhauer
-
-
+/** Počáteční soubor webu
+    Autor: Jaromír Feilhauer
+    Developed in 2019
+*/
 
 // Nastavení interního kódování
 mb_internal_encoding("utf-8");
@@ -20,7 +20,6 @@ function autoloadFunkcion($class)
 spl_autoload_register("autoloadFunkcion");
 
 // Připojení k databazi pomocí DB ovladače
-
 Db::pripoj(dbAddress,dbUsername,dbPassword,database);
 
 // Zpracování údajů z URL od uživatele a vytvoření směrovače

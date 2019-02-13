@@ -18,8 +18,7 @@ class O_projektuController extends Controller
         else {
             $this->nastaveni='Registrace';
         }
-        $this->view = 'o_projektu';    	
-        
+        $this->view = 'o_projektu';
     }
-}    
+}
 ?>

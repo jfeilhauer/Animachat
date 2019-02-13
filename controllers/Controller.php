@@ -1,7 +1,7 @@
-<?php 
+<?php
 // Třída hlavního Controller
 
-abstract class Controller 
+abstract class Controller
 {
     // Vlastnosti controlleru
         // Pole s indexy viditelnými v šabloně jako běžné proměnné
@@ -15,7 +15,6 @@ abstract class Controller
         // přepínání nápisu tlačítka nastavení v menu
         protected $nastaveni = '';
     // Metody controlleru
-        
         // ošetření vstupů
         private function osetri($x=null)
         {
@@ -29,12 +28,12 @@ abstract class Controller
                 {
                         $x[$k] = $this->osetri($v);
                 }
-                return $x;    
-            }    
-            else 
+                return $x;
+            }
+            else
                 return $x;
         }
-        
+
         // Vypíše pohled na stránku
         public function vypisView($user= Array())
         {
@@ -46,7 +45,7 @@ abstract class Controller
                 extract($this->data, EXTR_PREFIX_ALL, "");
                 // Zahrnutí souboru pohledu ze složky views
                 extract($this->osetri($user));
-                require("views/" . $this->view . ".phtml");    
+                require("views/" . $this->view . ".phtml");
             }
         }
         // metoda pro přesměrování na danou url
@@ -60,3 +59,4 @@ abstract class Controller
         abstract function zpracuj($parametry);
 
 }
+?>

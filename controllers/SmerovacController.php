@@ -1,5 +1,4 @@
 <?php
-
 // Směrovač který nám podle zadané URL zavolá
 // příslušný controller stránky a pohled vloží do šablony
 
@@ -13,13 +12,13 @@ class SmerovacController extends Controller
     {
         // Nahradí pomlčku za mezeru
         $veta = str_replace('-', ' ', $text);
-        // Změní počáteční písmena na Velká
+        // Změní počáteční písmena na velká
 		$veta = ucwords($veta);
         // Odstraní mezery
 		$veta = str_replace(' ', '', $veta);
 		return $veta;
     }
-    // Naparsuje URL adresu, rozdělí podle lomítek do pole 
+    // Naparsuje URL adresu, rozdělí podle lomítek do pole
 	private function parsujURL($url)
 	{
 		// Naparsuje jednotlivé části URL adresy do asociativního pole
@@ -37,32 +36,33 @@ class SmerovacController extends Controller
     {
 		// Parsování url
         $naparsovanaURL = $this->parsujURL($parametry[0]);
-		// Pokud je cesta prázdná(počáteční stránka), vykreslí se index		
-		if (empty($naparsovanaURL[0]))		
-            $naparsovanaURL[0]= 'index';		
+		// Pokud je cesta prázdná(počáteční stránka), vykreslí se index
+		if (empty($naparsovanaURL[0])){
+            $naparsovanaURL[0] = 'index';
+        }
 		// Controller je 1. parametr URL
 		$tridaKontroleru = $this->pomlckyDoVelNot(array_shift($naparsovanaURL)) . 'Controller';
 		// Pokud existuje daný kontroler vytvoř objekt, jinak přesměruj na stránku chyba
-		if (file_exists('controllers/' . $tridaKontroleru . '.php'))
+		if (file_exists('controllers/' . $tridaKontroleru . '.php')){
 			$this->controller = new $tridaKontroleru;
-        else
+        }
+        else {
             $this->presmeruj('chyba');
+        }
 		
-		// Volání controlleru
+		// Volání příslušného controlleru stránky
         $this->controller->zpracuj($naparsovanaURL);
-		
+
 		// Nastavení proměnných pro danou šablonu
 		$this->data['titulek'] = $this->controller->hlavicka['titulek'];
 		$this->data['popis'] = $this->controller->hlavicka['popis'];
 		$this->data['klicova_slova'] = $this->controller->hlavicka['klicova_slova'];
 		$this->data['css'] = $this->controller->hlavicka['css'];
-        $this->data['user'] = $this->controller->user;        
-        $this->data['nastaveni']= $this->controller->nastaveni;
-        
+        $this->data['user'] = $this->controller->user;
+        $this->data['nastaveni'] = $this->controller->nastaveni;
+
 		// Nastavení hlavní šablony
 		$this->view = 'rozlozeni';
     }
-      
 }
-
 ?>

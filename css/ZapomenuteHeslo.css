@@ -2,30 +2,30 @@ label {
     font-size: 1.1em;
 }
 input[type="email"]{
-    font-size: 1em;
+    width: 240px;
     margin-left: 12px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    width: 240px;
-    line-height: 1em;
     padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    line-height: 1em;
+    font-size: 1em;
 }
 input[type="submit"] {
-        width: 100px;
-        line-height: 1.3em;
-        margin-left: 12px;
-        background-color: rgb(18,51,101);
-        border-radius: 5px;
-        padding: 5px 5px 5px 5px;
-        color: white; 
-        font-size: 1.5em;
-        font-weight: bold;
-        border:  none ;       
+    width: 100px;
+    margin-left: 12px;
+    padding: 5px 5px 5px 5px;
+    background-color: #123365;
+    border:  none;
+    border-radius: 5px;
+    line-height: 1.3em;
+    color: #FFFFFF; 
+    font-size: 1.5em;
+    font-weight: bold;       
 }
 input[type="submit"]:hover {
-        background: rgb(18,51,145);
-        width: 100px;
-        margin-left: 11.25px;
-        color: #EEEEEE;
-        cursor: pointer;
+    width: 100px;
+    margin-left: 11.25px;
+    background: #123391;
+    color: #EEEEEE;
+    cursor: pointer;
 }

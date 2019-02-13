@@ -3,75 +3,91 @@
     text-align:center;
 }
 .news {
-    background-color: #123368;
-    border-radius: 15px;
     min-height: 250px;
-    padding: 5px 10px 10px 10px;
+    float: left;
     text-align: center;
-    color: white;
-    float: left;   
+    border-radius: 15px;
+    padding: 5px 10px 10px 10px;
+    background-color: #123368;
+    color: #FFFFFF;   
+}
+.news div {
+    display: inline-block;
+    text-align: left;
+    width: 85%;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    border: thick solid #FFFFFF;
+    border-radius: 15px;
+}
+.news div a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.news div h3 {
+    text-decoration: underline;
 }
 /* prihlasovani */
 .login {    
     text-align: center;
 }        
 .nadpis {
-        font-size: 2.3em;
-        margin-bottom: 10%;
+    margin-bottom: 10%;
+    font-size: 2.3em;
 }
 input[type="text"], input[type="password"], input[type="email"]{
-        font-size: 1em;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        line-height: 1.7em;
-        padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1em;
+    line-height: 1.7em;
+    border-radius: 5px;
 }
 input[type="submit"] {
-        line-height: 2em;
-        background-color: rgb(18,51,101);
-        border-radius: 5px;
-        padding: 5px 5px 5px 5px;
-        color: white; 
-        font-size: 1.5em;
-        font-weight: bold;
-        border:  none ;       
+    border:  none;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    background-color: #123365;
+    color: #FFFFFF;
+    line-height: 2em; 
+    font-size: 1.5em;
+    font-weight: bold;       
 }
 input[type="submit"]:hover {
-        background: rgb(18,51,145);
-        color: #EEEEEE;
-        cursor: pointer;
+    background: #123391;
+    color: #EEEEEE;
+    cursor: pointer;
 }
 form a {
-        display: inline-block;
-        text-align: right;
-        font-size: 1em;
-        margin-left: 60%;
-        margin-bottom: 3%;
-        color: rgb(18,51,101);
+    display: inline-block;
+    text-align: right;
+    margin-left: 60%;
+    margin-bottom: 3%;
+    font-size: 1em;
+    color: #123365;
 }
 #chybneUdaje {
     visibility: hidden;
     margin-bottom: 10px;
-    font-size: 1.2em;
-    color: red;
-    font-weight: bold;
-    text-align: right;
     padding-right: 15px;
+    font-size: 1.2em;
+    text-align: right;
+    color: #E50000;
+    font-weight: bold;
 }
 #user {
-     display: inline-block;
-     text-align: right;
+    display: inline-block;
+    text-align: right;
 }
 #user a {
+    display: inline-block;
+    width: 50%;
     border-radius: 15px;
     text-align: center;
-    display: inline-block;
-    background: rgb(18,51,145);
-    width: 50%;
+    margin-top: 10px;
     padding: 5px 5px 5px 5px;
+    background: #123391;
     color: #EEEEEE;
     cursor: pointer;
-    margin-top: 10px;
 }
 /* chat */
 .messenger-box {
@@ -79,38 +95,38 @@ form a {
 }
 #messenger {
     display: inline-block;
-    font-size: 1em;
-    border-radius: 5px;
-    line-height: 1em;
     padding: 10px 10px 10px 10px;
     border: thick solid #123368;
+    border-radius: 5px;
+    line-height: 1em;
+    font-size: 1em;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 #message {
-    border: thick solid #123368;
     display: inline-block;
+    border: thick solid #123368;
 }
 /* tabulka smajlíků */
 .eTable {
+    position: absolute;
     display: none;
     font-size: 2em;
     border: thick solid #123368;
     border-radius: 5px;
+    background-color: #FFFFFF;
     -webkit-user-select: none;  
     -moz-user-select: none;     
     -ms-user-select: none;      
     user-select: none;
-    position: absolute;
-    background-color: white;
 }
 .eTable > div {
     display: inline-block;
     cursor: pointer;
 }
 #eButton {
-    width: 10%;
     display: inline-block;
+    width: 10%;
     border-radius: 5px;
     cursor: pointer;     
 }
@@ -119,46 +135,46 @@ form a {
     min-height: 1em;
 }
 .zprava img {
+    display: inline-block;
     width: 75px;
     height: 75px;
     border-radius: 75px;
     border: thick solid #123368;
-    display: inline-block;
     float: left;
 }
 .zprava .messages{
-    border: thin solid #123368;
-    background-color: #123368;
-    color: white;
     display: inline-block;
+    padding: 5px 5px 5px 10px;
+    background-color: #123368;
+    border: thin solid #123368;
     border-radius: 20px;
     text-align: left;
-    padding: 5px 5px 5px 10px;
+    color: #FFFFFF;
 }
 .zprava .messages:hover{
+    border-bottom: thin solid #808080;
     background-color: #191970;
     cursor: pointer;
-    border-bottom: thin solid grey;
 }
 .zprava .dates{
     display: inline-block;
     visibility: hidden;
     margin-bottom: 10px;
-    color: rgb(68,68,68);
+    color: #444444;
     font-style: italic;
 }
 #loadNext {
+    margin-bottom: 10px;
     font-style: italic;
     color: #123368;
-    margin-bottom: 10px;
     cursor: pointer;
 }
 .leve {
     float: left;
 }
 .leve .users {
-    border-bottom: thick solid grey;
     padding: 10px 0 10px 10px;
+    border-bottom: thick solid #808080;
     white-space: nowrap;
 }
 .leve .users .name {
@@ -166,7 +182,6 @@ form a {
     height: 100%;
     padding-top: 0.4em;
     overflow: hidden;
-    
 }
 .leve .users img {
     width: 40px;
@@ -175,7 +190,7 @@ form a {
 }
 .leve .users:first-child {
     background-color: #123368;
-    color: white;
+    color: #FFFFFF;
 }
 /* pc */
 @media (min-width: 1000px){
@@ -194,32 +209,32 @@ form a {
 /* prihlasovani */
 .login {    
     display: inline-block;
-    border: thick solid black;
-    margin-top: 60px;
-    margin-right: 5%;
+    border: thick solid #000000;
     width: 30%;
     height: 400px;
+    margin-top: 60px;
+    margin-right: 5%;
     padding: 20px 20px 0 20px;
     float: right;
 }
 input[type="text"], input[type="password"]{
-        width: 85%;
+    width: 85%;
 }
 input[type="submit"] {
-        width: 90%;      
+    width: 90%;      
 }
 input[type="submit"]:hover {
-        width: 90.5%;
+    width: 90.5%;
 }
 #content {
     text-align: center;
 }
 #user {
-     border: thick solid black;
-     padding: 10px 10px 10px 10px;
-     width: 25%;
-     height: 100px;
-     float: right;
+    width: 25%;
+    height: 100px;
+    border: thick solid #000000;
+    padding: 10px 10px 10px 10px;
+    float: right;
 }
 /* chat */
 .messenger-box {
@@ -232,9 +247,9 @@ input[type="submit"]:hover {
     margin-bottom: 20px;
     margin-right: 15%;
     float: left;
-    -ms-scrollbar-arrow-color: white;
+    -ms-scrollbar-arrow-color: #FFFFFF;
     -ms-scrollbar-face-color: #123368;
-    -ms-scrollbar-track-color: white;
+    -ms-scrollbar-track-color: #FFFFFF;
 }
 /* scrollbar */
 #messenger::-webkit-scrollbar,.leve::-webkit-scrollbar {
@@ -242,17 +257,17 @@ input[type="submit"]:hover {
 }
 /* tělo */ 
 #messenger::-webkit-scrollbar-track,.leve::-webkit-scrollbar-track {
-    background: white;
+    background: #FFFFFF;
    }
 /* posuvník */ 
 #messenger::-webkit-scrollbar-thumb, .leve::-webkit-scrollbar-thumb {
     background: #123368;
     border-radius: 20px;
-    border: thick solid white;
+    border: thick solid #FFFFFF;
    }
 /* šipky */
 #messenger::-webkit-scrollbar-button, .leve::-webkit-scrollbar-button {
-    background: white;
+    background: #FFFFFF;
 }
 /*  */
 #messenger:hover {
@@ -264,10 +279,10 @@ input[type="submit"]:hover {
 }
 /* tabulka smajlíků */
 .eTable {
-    padding: 0.5em;
     width: 11em;
-    left: 32.65%;
     top: 41%;
+    left: 32.65%;
+    padding: 0.5em;
 }
 #eButton {
     padding-top: 1%; 
@@ -275,7 +290,6 @@ input[type="submit"]:hover {
 #eButton img {
     width: 80%;
 }
-
 /* uvnitř chatu */
 .zprava {
     margin-bottom: 50px;
@@ -293,19 +307,19 @@ input[type="submit"]:hover {
 .leve {
     width: 20%;
     display: inline-block;
-    border: thick solid grey;
+    border: thick solid #808080;
     overflow-y: scroll;
 }
 .prave {
-    width: 78%;
     display: inline-block;
+    width: 78%;
 }
 .leve .users {
     display: block;
+    height: 40px;
     margin: 10px 10px 10px 10px;
     border-radius: 40px;    
     text-align: left;
-    height: 40px;
     cursor: pointer;
 }
 .leve .users .name {
@@ -319,7 +333,7 @@ input[type="submit"]:hover {
 /* mobily */
 @media (max-width: 1000px){
 .welcome2 h1 {
-    display:none;
+    display: none;
 }
 .welcome {
 }
@@ -335,14 +349,12 @@ input[type="submit"]:hover {
 /* prihlasovani */
 .login{
     display: block;
-    border: 5px solid black;
+    width: 90%;
     margin-top: 20px;
     margin-left: 4%;
-    float: left;
-    width: 90%;
     padding: 10px 10px 20px 10px;
-}
-.nadpis {
+    border: 5px solid black;
+    float: left;
 }
 input[type="text"], input[type="password"]{
     width: 80%;
@@ -350,29 +362,21 @@ input[type="text"], input[type="password"]{
 input[type="submit"] {
     width: 50%;       
 }
-input[type="submit"]:hover {
-}
-form a {
-}
-#chybneUdaje {
-}
 #user {
-    font-size: 1.2em;
-    box-shadow: 0px 1px 2px white,0px -1px 2px white;
-    border-radius: 15px;
-    margin-top: 20px;
-    padding: 20px 20px 40px 10px;
     width: 80%;
     height: 60px;
-    background-color: white;
-}
-#user a {
+    margin-top: 20px;
+    padding: 20px 20px 40px 10px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    font-size: 1.2em;
+    box-shadow: 0px 1px 2px white,0px -1px 2px #FFFFFF;
 }
 /* chat */
 .messenger-box{
+    display: block;
     width: 80%;
     margin-left: 10%;
-    display: block;
 }
 #messenger { 
     width: 100%;
@@ -389,17 +393,17 @@ form a {
 }
 /* tělo */ 
 #messenger::-webkit-scrollbar-track {
-    background: white;
-   }
+    background: #FFFFFF;
+}
 /* posuvník */ 
 #messenger::-webkit-scrollbar-thumb {
     background: #123368;
     border-radius: 20px;
-    border: thick solid white;
-   }
+    border: thick solid #FFFFFF;
+}
 /* šipky */
 #messenger::-webkit-scrollbar-button{
-    background: white;
+    background: #FFFFFF;
 }
 #message {
     width: 80%;
@@ -407,12 +411,10 @@ form a {
 }
 /* tabulka smajlíků */
 .eTable {
-    padding: 0.4em;
     width: 9em;
     left: 9.5%;
     top: 46.5%;
-}
-.eTable > div {
+    padding: 0.4em;
 }
 #eButton {
     margin-left: 2%;     
@@ -434,36 +436,32 @@ form a {
     height: 75%;
     margin-left: 10%;
 }
-.zprava .messages:hover{
-}
 .zprava .dates{
     width: 28%;
     margin-left: 35%;
 }
-#loadNext {
-}
-.leve {
+.leve { 
+    display: block;
     width: 100%;
     height: 130px;
-    display: block;
-    overflow-y: hidden;
-    overflow-x: scroll;
     margin-bottom: 20px;
     padding-right: 5%;
+    overflow-y: hidden;
+    overflow-x: scroll;
     white-space: nowrap;
 }
 .prave {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 .leve .users {
     display: inline-block;
-    margin: 10px 0 10px 10px;
-    border-right: thin solid grey;
-    border-left: thin solid grey;
-    border-radius: 5px;
     height: 90px;
     width: 75px;
+    margin: 10px 0 10px 10px;
+    border-right: thin solid #808080;
+    border-left: thin solid #808080;
+    border-radius: 5px;
     text-align: center;
 }
 .leve .users .name {

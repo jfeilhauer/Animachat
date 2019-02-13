@@ -1,4 +1,5 @@
 <?php
+// Třída pro práci s uživatelskými daty
 class UzivatelController extends Controller
 {
 	public function zpracuj($parametry)
@@ -11,7 +12,7 @@ class UzivatelController extends Controller
 		);
         // vykreslení editace uživatele
         if((isset($_COOKIE['user'])) AND (!$_POST))
-        {   
+        {
             $this->user = Db::dotazUserData($_COOKIE['user'], "username, name, vorname, fce");
             $this->nastaveni='Nastavení';
             $this->view ='editUser';
@@ -25,7 +26,7 @@ class UzivatelController extends Controller
             if($registrace->getUspech())
                 echo ('<div class="serverMess">Registrace úspěšně dokončena!<br><a href="/">Přejít na hlavní stranu</a></div>');
             else
-                echo ('<div class="serverMess">Chyba!<br><a href="/uzivatel">Zkusit znovu</a></div>'); 
+                echo ('<div class="serverMess">Chyba!<br><a href="/uzivatel">Zkusit znovu</a></div>');
         }
         // odeslání editace
         elseif((isset($_POST['newName'])) OR (isset($_POST['newVorname'])) OR (isset($_POST['newPasswordAgain'])) OR (isset($_FILES['newAvatar'])))
@@ -39,16 +40,14 @@ class UzivatelController extends Controller
             }
             else{
                 echo ('<div class="serverMess">Chyba při ukládání!<br><a href="/uzivatel">Zkusit znovu</a></div>');
-            }   
+            }
         }
         // vykreslení registrace
         else
-        {   
-            $this->nastaveni='Registrace'; 
+        {
+            $this->nastaveni='Registrace';
             $this->view ='registrace';
-            
         }
-        
-        
     }
 }
+?>

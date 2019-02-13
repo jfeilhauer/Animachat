@@ -19,6 +19,7 @@ class ZapomenuteHesloController extends Controller
             else{
                 echo ('<div class="serverMess">Zadali jste špatný email<br><a href="/ZapomenuteHeslo">Zkusit znovu</a></div>');
             }
-        }			
+        }
     }
 }
+?>

@@ -1,31 +1,31 @@
 input[type="text"], input[type="password"], input[type="email"]{
-    font-size: 1em;
-    margin-bottom: 20px;
-    border-radius: 5px;
     width: 40%;
-    line-height: 1.7em;
+    margin-bottom: 20px;
     padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    line-height: 1.7em;
+    font-size: 1em;
 }
 input[type="submit"] {
+    border: none;
     width: 41.5%;
-    line-height: 2em;
-    background-color: rgb(18,51,101);
+    background-color: #123365;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
-    color: white; 
+    line-height: 2em;
+    color: #FFFFFF; 
     font-size: 1.5em;
-    font-weight: bold;
-    border:  none ;       
+    font-weight: bold;       
 }
 input[type="submit"]:hover {
-    background: rgb(18,51,145);
     width: 41.75%;
     margin-left: -0.125%;
+    background: #123391;
     color: #EEEEEE;
     cursor: pointer;
 }
 .alert {
-    display:inline-block;
+    display: inline-block;
 }
 input[type="checkbox"]{
     cursor: pointer;

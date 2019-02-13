@@ -12,19 +12,32 @@ window.addEventListener('click', function(e){hide(e);});
 // funkce
 function ajaxUpload(text){
     text = encodeURIComponent(text);
-    var xhttp = new XMLHttpRequest();
+    if (window.XMLHttpRequest){ 
+    // kod pro IE7+, Firefox, Chrome, Opera, Safari
+    xhttp = new XMLHttpRequest();
+    }
+    else{ 
+    // kod pro IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            ajaxDownload((getCookie('user')), user2, 1);
-          
+            ajaxDownload((getCookie('user')), user2, 1); 
         }
     };
-    xhttp.open("POST", "models/ajaxUpload.php", true);
+    xhttp.open("POST", "ajaxU", true);
     xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhttp.send("zprava="+text+"&user="+getCookie('user')+"&user_to="+user2);
 } 
 function ajaxDownload(user1,user2, typ){
-    var xhttp = new XMLHttpRequest();
+    if (window.XMLHttpRequest){ 
+    // kod pro IE7+, Firefox, Chrome, Opera, Safari
+    xhttp = new XMLHttpRequest();
+    }
+    else{ 
+    // kod pro IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // 1-scroll down, 2- noscroll, 3-halfscroll
@@ -39,7 +52,7 @@ function ajaxDownload(user1,user2, typ){
             } 
         }
     };
-    xhttp.open("POST", "models/ajaxDownload.php", true);
+    xhttp.open("POST", "ajaxD", true);
     xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhttp.send("user1="+user1+"&user2="+user2+"&pocet="+pocet);
 }

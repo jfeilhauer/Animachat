@@ -1,6 +1,5 @@
 <?php 
 // soubor pro komunikaci javascriptu se serverem
-require_once '../models/Db.php';
 class ajaxDownload 
 {
     private $export = '';
@@ -28,9 +27,4 @@ class ajaxDownload
     }
     
 }
-$pocet = $_POST['pocet']*10;
-$user1 = $_POST['user1'];
-$user2 = $_POST['user2'];
-$aDownload = new ajaxDownload($user1,$user2,$pocet);
-echo $aDownload->vytvorZpravy();
 ?>
