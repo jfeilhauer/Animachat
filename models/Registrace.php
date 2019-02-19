@@ -43,7 +43,8 @@ class Registrace {
         }
     }
     private function overUser($username){
-        $usernames = $this->getUsernames(); 
+        $usernames = $this->getUsernames();
+        $uspesne = true; 
         for($i= 0;$i < count($usernames); $i++){
              if($username == $usernames[$i]['username']){
                 $uspesne = false;

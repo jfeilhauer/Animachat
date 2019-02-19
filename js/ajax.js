@@ -149,6 +149,7 @@ function LoadMess(){
 }
 function insertSmile(smile){
     document.querySelector('#message').value+=smile;
+    document.getElementById("message").focus();
 }
 function hide(e){
     x=e.target;

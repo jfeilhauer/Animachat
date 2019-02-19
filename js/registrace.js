@@ -30,7 +30,7 @@ function checkPassword(Object){
         var hesloAgain = document.getElementById('passwordAgain');
         if(heslo.value!=hesloAgain.value){
             hesloAgain.style.border='thick solid red';
-            document.getElementsByClassName('alert')[3].innerHTML='hesla nejsou shodná';
+            document.getElementsByClassName('alert')[5].innerHTML='hesla nejsou shodná';
         }
         else {
             hesloAgain.style.border='thick solid green';
