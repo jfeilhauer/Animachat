@@ -74,7 +74,7 @@ footer {
     position: relative;
     display: inline-block;
     text-align: right;
-    top: 7px;
+    top: 100px;
     left: -8px;
     width: 100vw;
     min-height: 50px;
@@ -121,6 +121,17 @@ article {
     margin-right: 40px;
     padding: 20px 20px 20px 20px;
 }
+#sklikReklama_57715{
+    position: absolute;
+    left: 0;
+    bottom: 7px;   
+}
+#div_reklama{
+    display: inline-block;
+    width: 690px;
+    height: 70px;
+    float: left;
+}
 }
 /* mobily */
 @media (max-width: 1000px){
@@ -164,5 +175,14 @@ article {
     padding-top: 10px;
     padding-right: 14px;
     border-top: 5px solid #123368;
+}
+#sklikReklama_57715{
+    position: absolute;   
+}
+#div_reklama{
+    display: block;
+    margin-top: 20px;
+    width: 690px;
+    height: 70px;
 }
 }
