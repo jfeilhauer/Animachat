@@ -22,7 +22,8 @@ class Registrace {
     }
     private function avatar(){
         $id = Db::dotazJeden('SELECT MAX(`ID`) AS `id` FROM `users`');
-        if($_FILES['avatar']!=''){
+        if($_FILES['avatar']['name']){
+            print_r($_FILES);
             $filename = "a".$id['id'].".png"; 
             $tmpfilename = $_FILES["avatar"]["tmp_name"]; 
             $cesta = "./img/avatars/".$filename;
@@ -39,7 +40,9 @@ class Registrace {
             }        
         }
         else {
-            copy("./img/avatar.png", "./img/avatars/a".$id['id'].".png");      
+            copy("./img/avatar.png", "./img/avatars/a".$id['id'].".png");
+            print_r($_FILES);
+            $this->uspech = true;      
         }
     }
     private function overUser($username){
