@@ -78,7 +78,7 @@ class mail {
    $mail->Username = 'jjjaaarrrooommmiiirrr@gmail.com';
    
    /* SMTP authentication password. */
-   $mail->Password = 'rbou sqkc myzb sbbq';
+   $mail->Password = '************';
    
    /* Set the SMTP port. */
    $mail->Port = 587;
